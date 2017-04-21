@@ -1,0 +1,30 @@
+version = '1.0'
+project.description = 'JSP web application build demo'
+
+// apply plugin: 'java' or apply plugin: JavaPlugin, both work
+// apply plugin: JavaPlugin 
+apply plugin: 'java'
+
+sourceSets {
+	main {
+		java {
+			// default java source dolder is src/main/java
+			srcDir 'src'
+			println main.output.classesDir
+		}
+		resources {
+			// default project resource folder is src/main/resources
+			srcDir 'src/resources'
+		}
+	}
+}
+
+task init << {
+	println 'Project ' + project.name + ' is going to build:'
+	println 'Project directory: ' + project.projectDir
+	println 'Build directory: ' + project.buildDir
+	println 'Project version: ' + project.version
+	println 'Project description: ' + project.description
+}
+
+// task compileJava(type=JavaCompile)
