@@ -224,6 +224,6 @@
     </jsp-property-group>
   </jsp-config>
   <welcome-file-list>
-    <welcome-file>default.html</welcome-file>
+    <welcome-file>welcome.html</welcome-file>
   </welcome-file-list>
 </web-app>
